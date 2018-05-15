@@ -1,0 +1,102 @@
+//这里放网站的全局的样式
+// @font-face {
+//    font-family: 'MyFont';
+//    src:  url('../../fonts/my-font.woff2') format('woff2'),
+//          url('../../fonts/my-font.woff') format('woff');
+//    font-weight: 600;
+//    font-style: normal;
+// }
+// @99:#999;
+// body{
+//     font-family: 'MyFont';
+//     //font-family:'微软雅黑';
+//     background:@99;
+//     p{
+//         background:url('../../images/common/bg.png');
+//     }
+// }
+
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0;}
+body{
+    min-width:1200px;
+    font:12px"宋体","Arial Narrow",HELVETICA;
+    background:#fff;
+    -webkit-text-size-adjust: 100%;//webkit内核的浏览器(chrome)中,当在css中定义的中文font-size小于12px的时候,浏览器仍然使用12px,这时就可以用-webkit-text-size-adjust:none;
+}
+
+a{color:#666;text-decoration:none;}
+a:hover{color:#51A966;}
+em{font-size:normal;}
+li{list-style: none;}
+img{border:0;vertical-align: middle;}
+table{
+    border-collapse:collapse;//为表格设置合并边框模型：
+    border-spacing:0;
+}
+p{word-break:break-word;}
+
+
+
+
+header{
+    padding:8px 0;
+    width:100%;
+    height:36px;
+    background:#fff;
+    border-bottom:1px solid #eee;
+    .container{
+        margin:0 auto;
+        width:1200px;
+        height:36px;
+        .logo{
+            height:36px;
+            width:100px;
+            background:url('../../images/common/TT_logo.png') no-repeat;
+            float:left;
+        }
+        .title{
+            height:36px;
+            width:202px;
+            float:right;
+            ul{
+                font-size:14px;
+                height:20px;
+                margin-top:8px;
+                display:flex;
+                flex-direction:row;
+                li{
+                    line-height:20px;
+                    text-align:center;
+                    width:100px;
+                    border-right: 1px solid #eee;
+                    &:hover{
+                        cursor:pointer;
+                    }
+                }
+                li:last-child{
+                    border:none;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    width:1200px;
+    height:60px;
+    margin:0 auto;
+    padding:35px 0 20px 0;
+    border-top:1px solid #eee;
+    p{
+        text-align: center;
+        font-size:14px;
+        color:#666;
+        margin-bottom:6px;
+        a{
+            padding:0 8px 0 6px;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
